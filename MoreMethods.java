@@ -8,7 +8,7 @@ public class igricaV2 {
         igricaV2 gameObj= new igricaV2();
         gameObj.getUserMove();
         gameObj.getComputerMove();
-      gameObj.checkResult();
+      gameObj.checkResult( );
         
     }
     
@@ -24,7 +24,7 @@ public class igricaV2 {
         }
         System.out.println(playerMove + " is not a valid move.");
       } 
-      return  playerMove;
+      return playerMove;
     }
     public String getComputerMove(){
         String computerMove;
@@ -33,7 +33,7 @@ public class igricaV2 {
       System.out.println("Computer played: " + computerMove);
       return computerMove;
     }
-    public void checkResult(String g, String g) {
+    public void checkResult(String playerMove, String computerMove) {
     	
     	int playerPoints=0;
     	int computerPoints=0;
@@ -74,7 +74,7 @@ public class igricaV2 {
           System.out.println("Player has " + playerPoints + " points");
           System.out.println("Computer has " + computerPoints + " points");
         
-        
+      
 
     }
 
