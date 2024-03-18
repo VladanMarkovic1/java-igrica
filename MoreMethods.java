@@ -1,15 +1,17 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class igricaV2 {
+public class moreMethods {
 
-    
+     
     public static void main(String[] args) {
-        igricaV2 gameObj= new igricaV2();
-        gameObj.getUserMove();
-        gameObj.getComputerMove();
-      gameObj.checkResult( );
+        moreMethods gameObj= new moreMethods();
         
+        
+       String playerMove = gameObj.getUserMove();
+       String computerMove = gameObj.getComputerMove();
+       gameObj.checkResult(playerMove, computerMove);
+     
     }
     
 
@@ -28,17 +30,20 @@ public class igricaV2 {
     }
     public String getComputerMove(){
         String computerMove;
+        
       String[] rps = {"r", "p", "s"};
        computerMove = rps[new Random().nextInt(rps.length)];
       System.out.println("Computer played: " + computerMove);
-      return computerMove;
+     
+        return computerMove;
     }
     public void checkResult(String playerMove, String computerMove) {
     	
     	int playerPoints=0;
-    	int computerPoints=0;
+      	int computerPoints=0;
     	
-    	if (playerMove.equals(computerMove)) {
+    	
+		if (playerMove.equals(computerMove)) {
             System.out.println("The game was a tie!");
           }
 
@@ -47,14 +52,14 @@ public class igricaV2 {
               System.out.println("Computer win!" );
               computerPoints++;
             } else if (computerMove.equals("s")) {
-              System.out.println("PLayer win!" );
+              System.out.println("Player win!" );
               playerPoints++;
             }
           }
 
           else if (playerMove.equals("p")) {
             if (computerMove.equals("r")) {
-              System.out.println("PLayer win!"  );
+              System.out.println("Player win!"  );
               playerPoints++;
             } else if (computerMove.equals("s")) {
               System.out.println("Computer win!" );
@@ -64,7 +69,7 @@ public class igricaV2 {
 
           else if (playerMove.equals("s")) {
             if (computerMove.equals("p")) {
-              System.out.println("PLayer win!" );
+              System.out.println("Player win!" );
               playerPoints++;
             } else if (computerMove.equals("r")) {
               System.out.println("Computer win!");
@@ -73,10 +78,8 @@ public class igricaV2 {
           }
           System.out.println("Player has " + playerPoints + " points");
           System.out.println("Computer has " + computerPoints + " points");
-        
-      
+          
 
     }
-
-    
+    	
 }
