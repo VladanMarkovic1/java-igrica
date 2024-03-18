@@ -52,7 +52,7 @@ public class moreMethods {
               System.out.println("Computer win!" );
               computerPoints++;
             } else if (computerMove.equals("s")) {
-              System.out.println("Player win!" );
+              System.out.println("PLayer win!" );
               playerPoints++;
             }
           }
