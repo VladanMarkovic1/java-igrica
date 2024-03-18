@@ -59,7 +59,7 @@ public class moreMethods {
 
           else if (playerMove.equals("p")) {
             if (computerMove.equals("r")) {
-              System.out.println("PLayer win!"  );
+              System.out.println("Player win!"  );
               playerPoints++;
             } else if (computerMove.equals("s")) {
               System.out.println("Computer win!" );
